@@ -1,0 +1,50 @@
+---
+slug: "/articles/blog5"
+date: "2020-04-09"
+title: "Podświetlanie składni kodu"
+subtitle: "Formatowanie kodu"
+tags: ["gatsby","tailwind","tailwindcss","prism"]
+---
+## Jak podświetlać kodu
+
+```shell
+npm install --save prism-react-renderer
+```
+
+Konfiguracja
+
+```jsx
+const MyPRE = props => {
+  const className = props.children.props.className || '';
+  const matches = className.match(/language-(?<lang>.*)/);
+  return (
+    <Highlight
+      {...defaultProps}
+      code={props.children.props.children.trim()}
+      language={
+        matches && matches.groups && matches.groups.lang
+          ? matches.groups.lang
+          : ''
+      }
+    >
+      {({
+        className,
+        style,
+        tokens,
+        getLineProps,
+        getTokenProps,
+      }) => (
+        <pre className={"m-4 p-4 overflow-x-auto rounded-md"} style={style}>
+          {tokens.map((line, i) => (
+            <div {...getLineProps({ line, key: i })}>
+              {line.map((token, key) => (
+                <span {...getTokenProps({ token, key })} />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )}
+    </Highlight>
+  )
+};
+```

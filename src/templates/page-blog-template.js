@@ -12,7 +12,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { mdx } = data // data.markdownRemark holds your post data
+  const { mdx } = data // data.mdx holds your post data
   const { frontmatter, body } = mdx
   return (
     <Layout>
@@ -25,10 +25,10 @@ export default function Template({
           <h1 className="text-4xl font-medium text-primary mb-2">{frontmatter.title}</h1>
           <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">{frontmatter.subtitle}</h2>
           <div className="flex flex-wrap justify-between">
-            <div>
+            <div className="flex-shrink">
               <PostDate date={frontmatter.date} /> 
             </div>
-            <div>
+            <div className="flex-shrink">
             <PostTag tags={frontmatter.tags} />
             </div>
           </div>

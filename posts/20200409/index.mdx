@@ -1,50 +1,30 @@
 ---
-slug: "/articles/blog5"
+slug: "/articles/prismjs-highlighted-code"
 date: "2020-04-09"
-title: "Podświetlanie składni kodu"
-subtitle: "Formatowanie kodu"
-tags: ["gatsby","tailwind","tailwindcss","prism"]
+title: "Prismjs highlighted code"
+subtitle: "Prismjs highlighted code"
+tags: ["gatsby","tailwind","prism","gatsby","tailwind","prism"]
 ---
-## Jak podświetlać kodu
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+Illum illo cupiditate molestias atque _consequuntur ea quo cumque_, odit velit sint similique? 
+Asperiores ratione aperiam tempora, **alias corrupti** deleniti quaerat molestiae.
+
+## Prismjs highlighted code
 
 ```shell
 npm install --save prism-react-renderer
 ```
 
-Konfiguracja
+Example
 
 ```jsx
-const MyPRE = props => {
-  const className = props.children.props.className || '';
-  const matches = className.match(/language-(?<lang>.*)/);
-  return (
-    <Highlight
-      {...defaultProps}
-      code={props.children.props.children.trim()}
-      language={
-        matches && matches.groups && matches.groups.lang
-          ? matches.groups.lang
-          : ''
-      }
-    >
-      {({
-        className,
-        style,
-        tokens,
-        getLineProps,
-        getTokenProps,
-      }) => (
-        <pre className={"m-4 p-4 overflow-x-auto rounded-md"} style={style}>
-          {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  )
-};
+const ui = (
+  <Highlight>
+    {highlight => (
+      // use utilities and prop getters here
+      <pre>{/* more jsx here */}</pre>
+    )}
+  </Highlight>
+);
+
 ```

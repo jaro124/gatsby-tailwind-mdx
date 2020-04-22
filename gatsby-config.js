@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `w129`,
+    title: `w129 blog`,
     titleTemplate: "%s · The Real Hero",
     description: `Gatsby and Tailwindcss starter`,
     author: `@w129`,

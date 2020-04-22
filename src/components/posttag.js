@@ -15,7 +15,7 @@ const PostTag = ({ tags }) => (
           <path d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
       </svg>
       {tags.map((tag) => (
-        <span className="pl-4">#{tag}</span>
+        <span className="inline-block pl-4">#{tag}</span>
       ))}
     </p>
   </div>

@@ -1,37 +1,22 @@
 ---
-slug: "/articles/blog4"
+slug: "/articles/mdx"
 date: "2020-04-02"
 title: "MDX"
-subtitle: "Instal MDX support"
-tags: ["gatsby","tailwind","tailwindcss"]
+subtitle: "Install MDX support"
+tags: ["gatsby","mdx"]
 ---
-### Artykuł czwarty
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+Illum illo cupiditate molestias atque consequuntur ea quo cumque, odit velit sint similique? 
+Asperiores ratione aperiam tempora, alias corrupti deleniti quaerat molestiae. 
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+Illum illo cupiditate molestias atque consequuntur ea quo cumque, odit velit sint similique? 
 
+## Install MDX
+
+```JSX
 npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+```
 
-wlaączenie dla plików md
-{
-  resolve: `gatsby-plugin-mdx`,
-  options: {
-  extensions: [`.mdx`, `.md`],
-  },
-},
-
-dodanie domyślnego wyglądu w konfiguracji
-defaultLayouts: {
-          posts: require.resolve("./src/components/posts-layout.js"),
-          default: require.resolve("./src/components/posts-layout.js"),
-        },
-
-npm install --save gatsby-transformer-sharp gatsby-plugin-sharp
-
-
-# Uwaga
-
-MDX seeks to make writing with Markdown and JSX simpler while being more expressive. Writing is fun again when you combine components, that can even be dynamic or load data, with the simplicity of Markdown for long-form content.
-- pierwszy
-- drugi
-
-## Drugi nagłówek
-
-MDX seeks to make writing with Markdown and JSX simpler while being more expressive. Writing is fun again when you combine components, that can even be dynamic or load data, with the simplicity of Markdown for long-form content.
+MDX seeks to make writing with Markdown and JSX simpler while being more expressive. 
+Writing is fun again when you combine components, that can even be dynamic or load data,
+ with the simplicity of Markdown for long-form content.

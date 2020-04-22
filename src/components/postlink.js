@@ -5,7 +5,7 @@ import PostTags from "../components/posttags"
 
 const PostLink = ({ post }) => (
   <div>
-    <h1 className="text-2xl font-medium mb-2"><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></h1>
+    <h1 className="text-2xl font-medium text-primary mb-2"><Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link></h1>
     <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">{post.frontmatter.subtitle}</h2>
     <PostTags tags={post.frontmatter.tags}/>
     <p className="text-sm text-gray-500 flex items-center pb-3">
@@ -23,13 +23,11 @@ const PostLink = ({ post }) => (
       </svg>
       {post.frontmatter.date}
     </p>
-    <p>{post.excerpt}</p>
+    <p className="text-primary">{post.excerpt}</p>
     
-    
-
     <div className="mt-4 mb-8">
       <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-        <Link to={post.frontmatter.path}>Read more</Link>
+        <Link to={post.frontmatter.slug}>Read more</Link>
       </button>
     </div>
   </div>

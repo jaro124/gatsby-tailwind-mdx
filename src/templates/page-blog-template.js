@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PostTags from "../components/posttags"
-import PostTag from "../components/posttag"
-import PostDate from "../components/postdate"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import PostHeader from "../components/postheader"
+import PostFooter from "../components/postfooter"
+import PostNavigation from "../components/postnavigation"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -22,34 +21,18 @@ export default function Template({
       />
       <div className="px-4">
         <div className="max-w-4xl bg-secondary rounded-lg mx-auto my-8 p-16">
-          <h1 className="text-4xl font-medium text-primary mb-2">{frontmatter.title}</h1>
-          <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">{frontmatter.subtitle}</h2>
-          <div className="flex flex-wrap justify-between">
-            <div className="flex-shrink">
-              <PostDate date={frontmatter.date} /> 
-            </div>
-            <div className="flex-shrink">
-            <PostTag tags={frontmatter.tags} />
-            </div>
-          </div>
-        
-        
-        <hr className="pb-6" />
-        
+
+          <PostHeader title={frontmatter.title} subtitle={frontmatter.subtitle} date={frontmatter.date} tags={frontmatter.tags} />
+      
           <div className="text-primary">
             <MDXRenderer>{body}</MDXRenderer>
           </div>
 
-          <hr className="mt-6" />
-        <PostTags tags={frontmatter.tags} />
+          <PostFooter />
 
-        <div className="mt-4">
-          <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-            <Link to="/articles">Back to list</Link>
-          </button>
-        </div>          
+          <PostNavigation />
+         
         </div>
-
       </div>
     </Layout>
   )

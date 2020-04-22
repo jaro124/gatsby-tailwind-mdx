@@ -11,7 +11,6 @@ const MyH5 = props => <h5 className="text-xl font-medium text-indigo-700 mb-2" {
 const MyH6 = props => <h6 className="text-xl font-medium text-indigo-700 mb-2" {...props} />
 const MyUL = props => <ul className="list-disc list-inside pb-2" {...props}/>
 const MyOL = props => <ol className="list-decimal list-inside pb-2" {...props}/>
-const MyPRE1 = props => <pre className="bg-gray-800 text-gray-200 text-sm mt-4 mb-4 p-4" {...props} />
 
 const MyPRE = props => {
   const className = props.children.props.className || '';

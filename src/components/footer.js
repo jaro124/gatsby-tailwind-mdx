@@ -79,7 +79,7 @@ const Footer = ({ siteTitle }) => (
             }
           ].map(link => (
             <Link
-              className="block md:inline-block mt-4 md:mt-0 md:mr-6 no-underline font-medium text-primary border-b-2 border-transparent hover:border-indigo-400"
+              className="block md:inline-block mt-4 md:mt-0 md:mr-6 no-underline font-medium text-primary border-b-2 border-transparent hover:border-green-500"
               key={link.title}
               to={link.route}
             >
@@ -89,9 +89,9 @@ const Footer = ({ siteTitle }) => (
         </nav>
         <p className="mt-6 text-xs md:pb-2">Build with:</p>
         <p>
-          <a href="https://www.gatsbyjs.org" className="block md:inline-block mt-4 md:mt-0 md:mr-6 no-underline font-medium text-primary border-b-2 border-transparent hover:border-indigo-400">Gatsby</a> 
-          <a href="https://tailwindcss.com/" className="block md:inline-block mt-4 md:mt-0 md:mr-6 no-underline font-medium text-primary border-b-2 border-transparent hover:border-indigo-400">Tailwind CSS</a>
-          <a href="https://mdxjs.com/" className="block md:inline-block mt-4 md:mt-0 md:mr-6 no-underline font-medium text-primary border-b-2 border-transparent hover:border-indigo-400">MDX</a>
+          <a href="https://www.gatsbyjs.org" className="block md:inline-block mt-4 md:mt-0 md:mr-6 no-underline font-medium text-primary border-b-2 border-transparent hover:border-green-500">Gatsby</a> 
+          <a href="https://tailwindcss.com/" className="block md:inline-block mt-4 md:mt-0 md:mr-6 no-underline font-medium text-primary border-b-2 border-transparent hover:border-green-500">Tailwind CSS</a>
+          <a href="https://mdxjs.com/" className="block md:inline-block mt-4 md:mt-0 md:mr-6 no-underline font-medium text-primary border-b-2 border-transparent hover:border-green-500">MDX</a>
         </p>
       </div>
     </div>

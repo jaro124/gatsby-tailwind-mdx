@@ -1,11 +1,11 @@
 import React from "react"
 
-const initialValue = { theme: "theme-light" }
+const initialValue = { theme: "theme-dark" }
 
 export const ThemeContext = React.createContext(initialValue)
 
 export default function ThemeProvider({ children }) {
-  const [theme, setTheme] = React.useState("theme-light")
+  const [theme, setTheme] = React.useState("theme-dark")
 
   function toggleTheme() {
     console.log("TOGGLE!!")

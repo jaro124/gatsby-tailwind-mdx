@@ -5,20 +5,21 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby with Tailwind CSS starter
+  Gatsby, Tailwind CSS, MDX starter
 </h1>
 
-Built on the basis of Gatsby's default starter.
+Built on the Gatsby Tailwind CSS starter.
+Repository is <a href="https://github.com/jaro124/gatsby-tailwind">here</a>
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby with Tailwind CSS site.**
+1.  **Create a Gatsby with Tailwind CSS and MDX blog.**
 
     Use the Gatsby CLI to create a new site, specifying the starter.
 
     ```shell
     # create a new Gatsby site using the starter
-    gatsby new my-starter https://github.com/jaro124/gatsby-tailwind
+    gatsby new my-starter https://github.com/jaro124/gatsby-tailwind-mdx
     ```
 
 1.  **Start developing.**
@@ -44,14 +45,18 @@ Starter contains:
 - tailwindcss
 - postcss
 - purgecss
+- **add mdx support**
+
+![alt](https://mdx-logo.now.sh)
+
 - and more
 
 ## Demo site
 
-Demo is available <a href="https://gatsby-tailwind-w129.netlify.com/">here</a>
+Demo is available <a href="https://gatsby-tailwind-mdx-w129.netlify.com/">here</a>
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jaro124/gatsby-tailwind)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jaro124/gatsby-tailwind-mdx)
 
 <!-- AUTO-GENERATED-CONTENT:END -->

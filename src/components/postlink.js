@@ -10,7 +10,7 @@ const PostLink = ({ post }) => (
     <div className="text-primary">{post.excerpt}</div>
     
     <div className="mt-4 mb-8">
-      <button className="bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">
+      <button className="bg-green-500 hover:bg-green-400 text-secondary font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">
         <Link to={post.frontmatter.slug}>Read more</Link>
       </button>
     </div>

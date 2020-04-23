@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `w129 blog`,
-    titleTemplate: "%s · The Real Hero",
-    description: `Gatsby and Tailwindcss starter`,
+    titleTemplate: "%s · Bolg",
+    description: `Gatsby, Tailwindcss and Mdx starter`,
     author: `@w129`,
     url: "https://www.doe.com", // No trailing slash allowed!
     image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder

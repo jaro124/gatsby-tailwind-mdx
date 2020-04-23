@@ -14,12 +14,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allMdx(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allMdx(sort: {order: DESC, fields: [frontmatter___date]}, limit: 1000) {
         edges {
           node {
+            frontmatter {
+              slug
+            }
+          }
+          next {
+            frontmatter {
+              slug
+            }
+          }
+          previous {
             frontmatter {
               slug
             }
@@ -35,11 +42,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMdx.edges.forEach(({ node }) => {
+  const posts = result.data.allMdx.edges;
+
+  posts.forEach(( post, index ) => {
+
+    const previous = index === posts.length - 1 ? null : posts[index + 1];
+    const next = index === 0 ? null : posts[index - 1];
+
     createPage({
-      path: node.frontmatter.slug,
+      path: post.node.frontmatter.slug,
       component: blogPostTemplate,
-      context: {}, // additional data can be passed via context
+      context: {
+        next,
+        previous,
+      }, // additional data can be passed via context
     })
   })
 }

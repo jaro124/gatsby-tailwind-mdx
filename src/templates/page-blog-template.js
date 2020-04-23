@@ -9,10 +9,11 @@ import PostFooter from "../components/postfooter"
 import PostNavigation from "../components/postnavigation"
 
 export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
+  data, pageContext // this prop will be injected by the GraphQL query below.
 }) {
   const { mdx } = data // data.mdx holds your post data
   const { frontmatter, body } = mdx
+  const { previous, next } = pageContext;
   return (
     <Layout>
       <SEO 
@@ -30,7 +31,7 @@ export default function Template({
 
           <PostFooter />
 
-          <PostNavigation />
+          <PostNavigation previous={previous} next={next} />
          
         </div>
       </div>

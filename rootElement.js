@@ -3,14 +3,31 @@ import { MDXProvider } from "@mdx-js/react"
 import ThemeProvider from "./src/utils/themeContext"
 import Highlight, { defaultProps } from 'prism-react-renderer';
 
-const MyH1 = props => <h1 className="text-4xl font-medium text-indigo-700 mb-2" {...props} />
-const MyH2 = props => <h2 className="text-3xl font-medium text-indigo-700 mb-2" {...props} />
-const MyH3 = props => <h3 className="text-2xl font-medium text-indigo-700 mb-2" {...props} />
-const MyH4 = props => <h4 className="text-xl font-medium text-indigo-700 mb-2" {...props} />
-const MyH5 = props => <h5 className="text-xl font-medium text-indigo-700 mb-2" {...props} />
-const MyH6 = props => <h6 className="text-xl font-medium text-indigo-700 mb-2" {...props} />
+const MyH1 = ({ children }) => (
+  <h1 className="text-4xl font-medium text-indigo-700 mb-2">{children}</h1>
+);
+const MyH2 = ({ children }) => (
+  <h2 className="text-3xl font-medium text-indigo-700 mb-2">{children}</h2>
+);
+const MyH3 = ({ children }) => (
+  <h3 className="text-2xl font-medium text-indigo-700 mb-2">{children}</h3>
+);
+const MyH4 = ({ children }) => (
+  <h4 className="text-xl font-medium text-indigo-700 mb-2">{children}</h4>
+);
+const MyH5 = ({ children }) => (
+  <h5 className="text-xl font-medium text-indigo-700 mb-2">{children}</h5>
+);
+const MyH6 = ({ children }) => (
+  <h6 className="text-xl font-medium text-indigo-700 mb-2">{children}</h6>
+);
+
+const MyA = props => <a className="text-green-500 font-medium no-underline border-b-2 border-transparent hover:border-green-500" {...props}/>
+
 const MyUL = props => <ul className="list-disc list-inside pb-2" {...props}/>
 const MyOL = props => <ol className="list-decimal list-inside pb-2" {...props}/>
+
+const MyParagraph = props => <p className="pt-2 pb-2" {...props} />
 
 const MyPRE = props => {
   const className = props.children.props.className || '';
@@ -45,9 +62,6 @@ const MyPRE = props => {
     </Highlight>
   )
 };
-
-const MyA = props => <a className="text-green-500 font-medium no-underline border-b-2 border-transparent hover:border-green-500" {...props} />
-const MyParagraph = props => <p className="pt-2 pb-2" {...props} />
 
 const components = {
   h1: MyH1,

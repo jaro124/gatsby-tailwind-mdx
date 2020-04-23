@@ -15,7 +15,7 @@ const ArticlesPage = ({
   return (
     <Layout>
       <SEO 
-        title="List of article"
+        title="List of articles"
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
       <div className="px-4">

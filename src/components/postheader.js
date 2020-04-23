@@ -11,7 +11,7 @@ const PostHeader = ({ title, subtitle, date, tags }) => (
       <div className="w-full md:w-1/3 text-left">
         <PostDate date={date} /> 
       </div>
-      <div className="w-full md:w-2/3 pt-2 md:pt-0 text-left md:text-right">
+      <div className="w-full md:w-2/3 pb-2 md:pb-0 text-left md:text-right">
         <PostTags tags={tags} />
       </div>
     </div>

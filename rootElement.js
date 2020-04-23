@@ -78,5 +78,5 @@ const components = {
 }
 
 export default function RootElement({ element }) {
-  return <ThemeProvider><MDXProvider components={components}>{element}</MDXProvider></ThemeProvider>
+  return <MDXProvider components={components}><ThemeProvider>{element}</ThemeProvider></MDXProvider>
 }

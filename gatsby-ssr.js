@@ -5,7 +5,3 @@
  */
 
 // You can delete this file if you're not using it
-import "./src/components/layout.css"
-import wrapRootElement from "./rootElement"
-
-export { wrapRootElement }

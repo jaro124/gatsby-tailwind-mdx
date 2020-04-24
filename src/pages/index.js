@@ -3,6 +3,9 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import LastPost from "../components/lastpost"
+import Last3Posts from "../components/last3posts"
+import BestPost from "../components/bestpost"
 
 export default function Index() {
   
@@ -13,6 +16,15 @@ export default function Index() {
       keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
     />
     <div className="px-4">
+      <LastPost />
+      <BestPost />
+      <Last3Posts />
+
+      <div className="flex justify-center mt-8">
+        <div>
+          <h1 className="text-5xl font-bold text-center text-primary mb-2 border-b-2 border-indigo-400">Information</h1>
+        </div>
+      </div>
       <div className="max-w-4xl bg-secondary rounded-lg mx-auto my-8 p-16">
         <h1 className="text-2xl text-primary font-medium mb-2">Let's Build: With Tailwind CSS</h1>
         <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">Tailwind CSS</h2>

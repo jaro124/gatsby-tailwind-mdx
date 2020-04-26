@@ -1,6 +1,8 @@
 import React from "react"
 
-const PostTags = ({ tags }) => (
+const PostTags = ({ tags }) => {
+  console.log(tags)
+  return (
   <div>  
     <div className="flex flex-wrap text-sm text-gray-500 uppercase justify-start md:justify-end">
       <div className="pt-1">
@@ -21,6 +23,6 @@ const PostTags = ({ tags }) => (
       ))}
     </div>
   </div>
-)
+)}
 
 export default PostTags

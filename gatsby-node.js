@@ -11,6 +11,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/page-blog-template.js`)
+  const blogListTemplate = path.resolve(`src/templates/page-list-blog-template.js`)
 
   const result = await graphql(`
     {
@@ -45,17 +46,31 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const posts = result.data.allMdx.edges;
 
   posts.forEach(( post, index ) => {
-
     const previous = index === posts.length - 1 ? null : posts[index + 1];
     const next = index === 0 ? null : posts[index - 1];
-
     createPage({
       path: post.node.frontmatter.slug,
       component: blogPostTemplate,
       context: {
         next,
         previous,
-      }, // additional data can be passed via context
+      }, 
+    })
+  })
+
+  // Create blog-list pages
+  const postsPerPage = 2
+  const numPages = Math.ceil(posts.length / postsPerPage)
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/articles` : `/articles/${i + 1}`,
+      component: blogListTemplate,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
     })
   })
 }

@@ -29,7 +29,7 @@ export default () => {
   return (
     <div>
         <div className="flex flex-wrap justify-between mt-16 mb-16 w-full items-center">
-          <div className="w-full md:w-1/2 text-left md:text-right">
+          <div className="w-full md:w-1/2 text-left md:text-right pr-4">
             <h1 className="text-5xl font-bold text-primary mb-2">{post.frontmatter.title}</h1>
             <h2 className="text-xl font-medium text-indigo-400 mb-4 uppercase tracking-wide">{post.frontmatter.subtitle}</h2>
             
@@ -40,7 +40,7 @@ export default () => {
               </button>
             </div>
           </div>
-          <div className="hidden md:block w-full md:w-1/2 pb-2 md:pb-0 text-left md:text-right">
+          <div className="hidden md:block w-full md:w-1/2 pl-4 pb-2 md:pb-0 text-left md:text-right">
             <img src={BoxImg} alt="Logo" />
           </div>
         </div>

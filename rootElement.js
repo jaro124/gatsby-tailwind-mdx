@@ -29,6 +29,8 @@ const MyOL = props => <ol className="list-decimal list-inside pb-2" {...props}/>
 
 const MyParagraph = props => <p className="pt-2 pb-2" {...props} />
 
+const MyBlockquote = props => <blockquote className="text-lg italic m-8 p-8 text-primary rounded-md bg-gray-700 border-solid border-l-4 border-primary" {...props} />
+
 const MyPRE = props => {
   const className = props.children.props.className || '';
   const matches = className.match(/language-(?<lang>.*)/);
@@ -75,6 +77,7 @@ const components = {
   a: MyA,
   pre: MyPRE,
   p: MyParagraph,
+  blockquote: MyBlockquote,
 }
 
 export default function RootElement({ element }) {

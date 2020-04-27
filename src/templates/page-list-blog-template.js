@@ -19,7 +19,7 @@ export default function Template({
       <div className="px-4">
         <div className="max-w-4xl bg-secondary rounded-lg mx-auto my-8 p-16">
           {edges.map((edge) => (
-            <div>
+            <div key={edge.node.id}>
               <PostLink post={edge.node} />
             </div>
           ))}
@@ -35,32 +35,6 @@ export default function Template({
   )
 }
 
-
-/*  export default function Template({
-  data: {
-    allMdx: { edges },
-    pageContext,
-  }, // this prop will be injected by the GraphQL query below.
-}) {
-  //const { limit, skip,  numPages, currentPage } = pageContext;
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-  return (
-    <Layout>
-      <SEO 
-        title="List of articles"
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-      />
-      <div className="px-4">
-        <div className="max-w-4xl bg-secondary rounded-lg mx-auto my-8 p-16">
-          {Posts}
-        </div>
-      </div>
-    </Layout> 
-  )
-} */
- 
 export const blogListQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     allMdx(

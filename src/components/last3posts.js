@@ -18,6 +18,7 @@ export default () => {
             tags
           }
           excerpt(pruneLength: 100)
+          id
         }
       }
     }
@@ -40,7 +41,7 @@ export default () => {
           <div className="w-full md:w-1/2 text-left pl-16">
           
           {posts.map((post) => (  
-            <div>
+            <div key={post.node.id}>
               <Link className="text-xl font-bold text-primary block md:inline-block mt-4 md:mt-0 md:mr-6 no-underline font-medium text-primary border-b-2 border-transparent hover:border-green-500" to={post.node.frontmatter.slug}>{post.node.frontmatter.title}</Link>
               <PostDate date={post.node.frontmatter.date} />
               <div className="text-primary mb-8">{post.node.excerpt}</div>

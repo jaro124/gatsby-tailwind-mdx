@@ -2,7 +2,7 @@ import React from "react"
 
 const PostFooter = () => (
   <div>  
-    <hr className="pb-6" />
+    <hr className="pb-8 mt-8" />
   </div>
 )
 

@@ -16,6 +16,7 @@ export default () => {
             tags
           }
           excerpt(pruneLength: 150)
+          id
         }
       }
     }
@@ -35,7 +36,7 @@ export default () => {
       <div className="flex flex-wrap justify-between mt-4 w-full">
       
       {posts.map((post) => (    
-        <div className="w-full lg:w-1/3 text-left p-2 lg:p-4">
+        <div className="w-full lg:w-1/3 text-left p-2 lg:p-4" key={post.node.id}>
           <div className="max-w-4xl bg-secondary rounded-lg mx-auto my-2 p-16">
             <h1 className="text-3xl font-bold text-primary mb-2">{post.node.frontmatter.title}</h1>
             <h2 className="text-sm font-medium text-indigo-400 mb-4 uppercase tracking-wide">{post.node.frontmatter.subtitle}</h2>

@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-tailwind-starter",
+  "name": "gatsby-tailwind-mdx-starter",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
@@ -13,7 +13,6 @@
     "gatsby-plugin-mdx": "^1.1.7",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-postcss": "^2.2.1",
-    "gatsby-plugin-purgecss": "^5.0.0",
     "gatsby-plugin-react-helmet": "^3.1.24",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.4.13",
@@ -27,14 +26,14 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.0",
-    "postcss-preset-env": "^6.7.0",
+    "gatsby-plugin-purgecss": "^5.0.0",
     "prettier": "^1.19.1",
     "tailwindcss": "^1.2.0"
   },
   "keywords": [
     "gatsby",
-    "tailwind"
+    "tailwind",
+    "mdx"
   ],
   "license": "MIT",
   "scripts": {
@@ -48,9 +47,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaro124/gatsby-tailwind"
+    "url": "https://github.com/jaro124/gatsby-tailwind-mdx"
   },
   "bugs": {
-    "url": "https://github.com/jaro124/gatsby-tailwind/issues"
+    "url": "https://github.com/jaro124/gatsby-tailwind-mdx/issues"
   }
 }

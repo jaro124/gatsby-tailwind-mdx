@@ -45,7 +45,11 @@ Starter contains:
 - tailwindcss
 - postcss
 - purgecss
+- graphql
 - **add mdx support**
+- **add svg loader**
+- **add pagination**
+- **add navigation between posts**
 
 ![alt](https://mdx-logo.now.sh)
 
